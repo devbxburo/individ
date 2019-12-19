@@ -1,0 +1,123 @@
+@white: #fff;
+@white-o: rgba(255, 255, 255, 0.3);
+@black: #101010;
+@black-lt: #303030;
+@red: #A61744;
+@red-lt: #CB2323;
+@red-bg: radial-gradient(119.11% 121.88% at 86.25% 18.44%, rgba(203, 35, 35, 0.74) 0%, rgba(170, 65, 65, 0) 100%), #A61744;
+@red-border: rgba(255, 255, 255, 0.3);
+@red-grad: linear-gradient(270.39deg, rgba(203, 35, 35, 0.74) -0.24%, rgba(170, 65, 65, 0) 98.72%), #A61744;
+@red-grad-2: linear-gradient(270.39deg, rgba(244, 92, 27, 0.74) -0.24%, rgba(170, 65, 65, 0) 98.72%), #BF202D;
+@gray-bg: #C4C4C4;
+@gray-bg-grad: radial-gradient(95.54% 242.06% at 69.1% -4.31%, rgba(255, 255, 255, 0.83) 21.73%, rgba(255, 255, 255, 0.14) 92.86%), #CFCFCF;
+@gray-1: #808080;
+@gray-2: #BFBFBF;
+@gray-3: #A4A4A4;
+@gold: #D0AE85;
+
+@media(max-width: 1200px) {
+    body {
+        .wrapper {
+            header {
+                .h-inner {
+                    position: relative;
+
+                    &.active {
+                        .txt {
+                            visibility: hidden;
+                            opacity: 0;
+                        }
+
+                        .menu {
+                            &-toggle {
+                                button {
+                                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='29' viewBox='0 0 29 29' fill='none'%3E%3Cpath d='M16.277 14.4739L26.2941 4.48362C26.7046 4.00548 26.677 3.29275 26.2307 2.84762C25.7844 2.40249 25.0698 2.37496 24.5903 2.78443L14.5733 12.7747L4.5562 2.77238C4.08239 2.29983 3.31419 2.29983 2.84037 2.77238C2.36656 3.24492 2.36656 4.01107 2.84037 4.48362L12.8695 14.4739L2.84037 24.4642C2.49554 24.7587 2.34534 25.2211 2.45152 25.6613C2.5577 26.1016 2.90234 26.4453 3.34374 26.5512C3.78514 26.6571 4.24881 26.5073 4.54412 26.1634L14.5733 16.1731L24.5903 26.1634C25.0698 26.5728 25.7844 26.5453 26.2307 26.1002C26.677 25.655 26.7046 24.9423 26.2941 24.4642L16.277 14.4739Z' fill='%23A61744'/%3E%3C/svg%3E") center no-repeat;
+                                }
+                            }
+
+                            .tabs {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .no-pos {
+                        position: unset;
+                    }
+
+                    .txt {
+                        opacity: 1;
+                        transition: .2s;
+                    }
+
+                    .menu {
+                        &-toggle {
+                            display: block;
+                        }
+
+                        .tabs {
+                            position: absolute;
+                            z-index: 10;
+                            top: 100%;
+                            left: -45px;
+                            right: -45px;
+                            bottom: ~"calc(-100vh + 100%)";
+                            padding: 35px;
+                            background: @black-lt;
+                            transition: .3s;
+                            transform: translateX(100%);
+                            opacity: 0;
+                            will-change: transform, opacity;
+
+                            &-block {
+                                flex-direction: column;
+                                align-items: center;
+                                max-height: 100%;
+                                overflow-y: scroll;
+
+                                &-item {
+                                    margin: 30px 0 0 0;
+
+                                    &:first-child {
+                                        margin-top: 0;
+                                    }
+
+                                    a {
+                                        color: @white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            main {
+                .m-inner {
+                    .contacting {
+                        padding: 50px 45px 30px 45px;
+
+                        &-block {
+                            &-item {
+                                margin-top: 40px;
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+                        
+                        &-map {
+                            padding: 50px 0 40px 0;
+
+                            &-body {
+                                position: static;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

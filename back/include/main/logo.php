@@ -1,0 +1,1 @@
+<img src="<?=SITE_TEMPLATE_PATH?>/media/examples/promo-logo.png" alt="error">
